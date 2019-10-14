@@ -1,4 +1,4 @@
-const { $ } = Ember;
+import $ from 'jquery';
 
 /**
  * @module ember-dialog/utils/zindex
