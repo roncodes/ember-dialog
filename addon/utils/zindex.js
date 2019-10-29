@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import jQuery from 'jquery';
 
 /**
  * @module ember-dialog/utils/zindex
@@ -14,7 +14,7 @@ import $ from 'jquery';
  * export default Ember.Component.extend({
  *
  *   didRender() {
- *     this.$().css({'z-index': max() + 1});
+ *     jQuery().css({'z-index': max() + 1});
  *   }
  *
  * });
@@ -22,11 +22,11 @@ import $ from 'jquery';
  * @return {Number}  Max `z-index` of the element on the page
  */
 export function max() {
-  var max = Math.max.apply(null, Array.from($(':visible:not(.highest)')).map(element => {
-	if($(element).css('position') === 'absolute' || $(element).css('position') === 'relative'){
-  	   return ($(element).css('z-index') >> 0) || 1;  // jshint ignore: line
-        }
-        return 0;
+  var max = Math.max.apply(null, Array.from(jQuery(':visible:not(.highest)')).map(element => {
+	if(jQuery(element).css('position') === 'absolute' || jQuery(element).css('position') === 'relative') {
+  	   return (jQuery(element).css('z-index') >> 0) || 1;  // jshint ignore: line
+    }
+    return 0;
   }));
   return max;
 }
