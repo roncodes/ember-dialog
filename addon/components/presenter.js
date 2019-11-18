@@ -1,11 +1,12 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import jQuery from 'jquery';
 import { max } from "ember-dialog/utils/zindex";
 
 /**
  * @module ember-dialog/components/presenter
  * @augments Ember.Component
  */
-export default Ember.Component.extend({
+export default Component.extend({
 
   /**
    * Dialog service puts given `context` into this property. It is available
@@ -117,7 +118,7 @@ export default Ember.Component.extend({
     const zindex = max();
 
     // Component element (wrapper of dialog-element)
-    const dialog = this.$().children();
+    const dialog = jQuery(this.element).children();
 
     // Set z-index biggest then biggenest
     dialog.css({'z-index': zindex + 1});
