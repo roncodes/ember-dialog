@@ -1,6 +1,8 @@
 import Component from '@ember/component';
-import jQuery from 'jquery';
+import $ from 'jquery';
 import { max } from "ember-dialog/utils/zindex";
+
+const jQuery = $ || window.$;
 
 /**
  * @module ember-dialog/components/presenter

@@ -1,4 +1,6 @@
-import jQuery from 'jquery';
+import $ from 'jquery';
+
+const jQuery = $ || window.$;
 
 /**
  * @module ember-dialog/utils/zindex
